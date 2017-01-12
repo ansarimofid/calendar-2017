@@ -1,3 +1,13 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.4rem;
+    font-family: 'Tenor Sans', sans-serif;
+    letter-spacing: 4px;
+}
+
 .ff-archivo {
     font-family: 'Archivo Black', sans-serif;
 }
@@ -10,18 +20,37 @@
     min-width: 100vw;
 }
 
-.color-white {
+.text-deco-underline {
+    text-decoration: underline;
+}
+
+.text-align-center{
+    text-align: center;
+}
+
+.text-color-white {
     color: white;
 }
-.color-black {
+.text-color-black {
     color: black;
 }
 
-.bg-color-red {
+.text-color-grey-67 {
+    color: #434343;
+}
+
+.text-color-grey-189 {
+    color: #BDBDBD;
+}
+
+.bg-color-color-red {
     background-color: red;
 }
-.bg-color-blue {
+.bg-color-color-blue {
     background-color: blue;
+}
+.margin-t-xsm {
+    margin-top: 4px;
 }
 
 .center-align {
@@ -29,3 +58,81 @@
     justify-content: center;
     align-items: center;
 }
+
+.bg-cover{
+    background-size: cover;
+    background-position: center;
+}
+
+.flex-d-c {
+    flex-direction: column;
+}
+.flex-d-r {
+    flex-direction: row;
+}
+
+.text-s-5x {
+    font-size: 5rem;
+}
+
+.text-s-4x {
+    font-size: 4rem;
+}
+
+.text-ls-1x {
+    letter-spacing: 1rem;
+}
+
+.page{
+    position: relative;
+}
+
+.page1 {
+    transition: all 4s;
+    background-color: red;
+}
+
+.page1 h1{
+    text-transform: capitalize;
+    letter-spacing: 10px;
+    color: black;
+    transform: translateX(-500px);
+    transition: all 2s;
+    opacity: 0;
+}
+
+.page1.effect {
+    background-color: orange;
+}
+
+.page1.effect h1 {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.intro {
+    background-image:linear-gradient(-180deg, rgba(241, 167, 68, 0.85) 0%, rgba(67, 67, 67, 0.85) 100%), url("../img/intro_bg.jpg");
+    background-color: bisque;
+    color: brown;
+    transition: background-color 1s;
+}
+
+.intro.effect {
+    background-color: #ffa181;
+}
+
+
+.translate-100 {
+    /*transition: transform 2s;*/
+    transform: translateY(1000px);
+}
+
+.text-2017 {
+    font-size: 15rem;
+}
+
+.text-calender{
+    /*font-size: 10rem;*/
+}
+
+/* Rectangle: */
