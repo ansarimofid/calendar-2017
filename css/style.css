@@ -52,6 +52,9 @@ body {
 .margin-t-xsm {
     margin-top: 4px;
 }
+.margin-b-sm {
+    margin-bottom: 8px;
+}
 
 .center-align {
     display: flex;
@@ -79,17 +82,25 @@ body {
     font-size: 4rem;
 }
 
+.text-s-10x {
+    font-size: 10rem;
+}
+
 .text-ls-1x {
     letter-spacing: 1rem;
 }
 
-.page{
+/*.gradient-jan{
+    !* Rectangle Copy: *!
+}*/
+
+.month{
     position: relative;
+    transition: all 4s;
 }
 
-.page1 {
-    transition: all 4s;
-    background-color: red;
+.month .month__title {
+    text-transform: uppercase;
 }
 
 .page1 h1{
@@ -134,5 +145,108 @@ body {
 .text-calender{
     /*font-size: 10rem;*/
 }
+
+.month .month__img{
+    height: 400px;
+    width: auto;
+    box-shadow: 0 15px 30px 6px rgba(0,0,0,0.50);
+}
+
+.month.jan {
+    background-image: linear-gradient(0deg, #69001a 0%, #E0C4C7 49%, #EBF1ED 65%, #FFFFFF 100%);
+}
+
+.month.jan .month__title {
+    color: #b9b9b9;
+}
+
+.month.feb {
+    background-image: linear-gradient(-180deg, #AD7F84 0%, #5E4C96 100%);
+}
+
+.month.feb .month__title {
+    color: rgba(15, 6, 53, 0.51);
+}
+
+.month.mar {
+    background-image: linear-gradient(-180deg, #af232b 0%, #EEAC3B 55%, #7E963F 100%);
+}
+
+.month.mar .month__title {
+    color: rgba(175, 35, 43, 0.8);
+}
+
+.month.apr {
+    background-image: linear-gradient(0deg, #006385 0%, #C095A9 48%, #E4D0C3 100%);
+}
+
+.month.apr .month__title {
+    color: rgba(193, 123, 149, 0.71);
+}
+
+.month.may {
+    background-image: linear-gradient(0deg, #008589 0%, #BBBBBB 48%, #ECECEC 100%);
+}
+
+.month.may .month__title {
+    color: rgba(174, 174, 174, 0.8);
+}
+
+.month.jun {
+    background-image: linear-gradient(0deg, #002F3B 0%, #00AEB0 100%);
+}
+
+.month.jun .month__title {
+    color: rgba(0, 93, 100, 0.75);
+}
+
+.month.jul {
+    background-image: linear-gradient(0deg, #017073 8%, #BF7239 52%, #FFBC69 100%);
+}
+
+.month.jul .month__title {
+    color: rgba(180, 100, 30, 0.8);
+}
+
+.month.aug {
+    background-image: linear-gradient(0deg, #394A55 10%, #AE753D 51%, #FFD293 100%);
+}
+
+.month.aug .month__title {
+    color: rgba(153, 109, 65, 0.8);
+}
+
+.month.sep {
+    background-image: linear-gradient(0deg, #0E3551 10%, #C76236 54%, #FBC275 100%);
+}
+
+.month.sep .month__title {
+    color: rgba(168, 90, 59, 0.86);
+}
+
+.month.oct {
+    background-image: linear-gradient(0deg, #DB3301 0%, #A0AF53 49%, #AFECE6 100%);
+}
+
+.month.oct .month__title {
+    color: rgba(143, 166, 99, 0.75);
+}
+
+.month.nov {
+    background-image: linear-gradient(0deg, #5C3600 0%, #F49A1F 56%, #FFE87C 100%);
+}
+
+.month.nov .month__title {
+    color: rgba(173, 109, 19, 0.81);
+}
+
+.month.dec {
+    background-image: linear-gradient(0deg, rgb(58, 36, 0) 0%, rgb(222, 151, 58) 56%, rgb(253, 227, 130) 100%);
+}
+
+.month.dec .month__title {
+    color: rgba(192, 153, 154, 0.76);
+}
+
 
 /* Rectangle: */
