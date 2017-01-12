@@ -233,7 +233,7 @@ body {
 }
 
 .month.nov {
-    background-image: linear-gradient(0deg, #5C3600 0%, #F49A1F 56%, #FFE87C 100%);
+    background-image: linear-gradient(0deg, rgb(58, 36, 0) 0%, rgb(222, 151, 58) 56%, rgb(253, 227, 130) 100%);
 }
 
 .month.nov .month__title {
@@ -241,7 +241,7 @@ body {
 }
 
 .month.dec {
-    background-image: linear-gradient(0deg, rgb(58, 36, 0) 0%, rgb(222, 151, 58) 56%, rgb(253, 227, 130) 100%);
+    background-image: linear-gradient(0deg, #24658A 0%, #D2BDBD 36%, #F3EDEA 100%);
 }
 
 .month.dec .month__title {
