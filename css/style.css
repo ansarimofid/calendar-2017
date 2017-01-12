@@ -1,0 +1,31 @@
+.ff-archivo {
+    font-family: 'Archivo Black', sans-serif;
+}
+.ff-tenor {
+    font-family: 'Tenor Sans', sans-serif;
+}
+
+.full-page {
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.color-white {
+    color: white;
+}
+.color-black {
+    color: black;
+}
+
+.bg-color-red {
+    background-color: red;
+}
+.bg-color-blue {
+    background-color: blue;
+}
+
+.center-align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

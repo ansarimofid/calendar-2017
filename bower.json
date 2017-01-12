@@ -1,0 +1,23 @@
+{
+  "name": "calender-2017",
+  "authors": [
+    "ansarimofid <ansarimofid@gmail.com>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "ansarimofid.in/calender-2017",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "scrollmagic": "^2.0.5",
+    "jquery": "^3.1.1",
+    "normalize-css": "^5.0.0"
+  }
+}
