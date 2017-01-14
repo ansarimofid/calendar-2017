@@ -31,5 +31,28 @@ $(document).ready(function () {
     .setClassToggle('#id_page1','effect')
     .addIndicators()
     .addTo(controller);
+  
+  $('.month').each(function () {
+    var monthScene = new ScrollMagic.Scene({
+      triggerElement:this,
+      duration:'67%',
+      triggerHook:-0.3
+    })
+      .setPin(this,{pushFollowers:false})
+      .addTo(controller);
+  });
+
+  $('.month').each(function () {
+
+    // console.log(this);
+    var monthScene = new ScrollMagic.Scene({
+      triggerElement:this,
+      duration:'147%',
+      triggerHook:0.65
+    })
+      .setClassToggle(this,'in-view-effect')
+      // .setPin(this,{pushFollowers:false})
+      .addTo(controller);
+  });
 
 });
