@@ -8,11 +8,41 @@ body {
     letter-spacing: 4px;
 }
 
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
 .ff-archivo {
     font-family: 'Archivo Black', sans-serif;
 }
+
 .ff-tenor {
     font-family: 'Tenor Sans', sans-serif;
+}
+
+.white-space{
+    display: block;
+    width: 100%;
+}
+
+.space-sm{
+    padding: 15px 0;
+}
+
+.space-mini{
+    padding: 8px 0;
+}
+
+.space-xsm{
+    padding: 5px 0;
+}
+
+.space-md{
+    padding: 30px 0;
+}
+.space-lg{
+    padding: 45px 0;
 }
 
 .full-page {
@@ -24,13 +54,14 @@ body {
     text-decoration: underline;
 }
 
-.text-align-center{
+.text-align-center {
     text-align: center;
 }
 
 .text-color-white {
     color: white;
 }
+
 .text-color-black {
     color: black;
 }
@@ -40,20 +71,52 @@ body {
 }
 
 .text-color-grey-189 {
-    color: #BDBDBD;
+    color: #BDBDBD !important;
 }
 
-.bg-color-color-red {
+.text-color-grey-158 {
+    color: #9e9e9e !important;
+}
+
+.text-color-primary {
+    color: #F1A744 !important;
+}
+
+.bg-color-red {
     background-color: red;
 }
-.bg-color-color-blue {
+
+.bg-color-blue {
     background-color: blue;
 }
+
+.bg-color-grey-67 {
+    background-color: #434343;
+}
+
+.bg-color-primary {
+    background-color: #F1A744 !important;
+}
+
+
 .margin-t-xsm {
     margin-top: 4px;
 }
+
+.margin-l-sm {
+    margin-left: 4px;
+}
+
+.margin-l-md {
+    margin-left: 16px;
+}
+
 .margin-b-sm {
     margin-bottom: 8px;
+}
+
+.margin-t-10x {
+    margin-top: 10rem;
 }
 
 .center-align {
@@ -62,7 +125,7 @@ body {
     align-items: center;
 }
 
-.bg-cover{
+.bg-cover {
     background-size: cover;
     background-position: center;
 }
@@ -70,6 +133,7 @@ body {
 .flex-d-c {
     flex-direction: column;
 }
+
 .flex-d-r {
     flex-direction: row;
 }
@@ -90,11 +154,84 @@ body {
     letter-spacing: 1rem;
 }
 
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.col-ver-align {
+    align-items: center;
+}
+
+.d-inline-flex {
+    display: inline-flex !important;
+}
+
+.container {
+    max-width:960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.list-style-reset {
+    list-style: none;
+    padding: inherit;
+    padding: 0;
+}
+
+.list-style-inline li{
+    display: inline-block;
+}
+
+.flex-row .col-3-md {
+    width: 33%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.seperator:after {
+    content: "/";
+}
+
 /*.gradient-jan{
     !* Rectangle Copy: *!
 }*/
 
-.month{
+.action-btn {
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+    margin: 1rem;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+    cursor: pointer;
+}
+
+.month .action-btn {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: 0.3s all;
+}
+
+.month.in-view-effect .action-btn {
+    opacity: 0.7;
+    transform: translateY(0);
+    transition:all 2s ease-in-out;
+}
+
+.month.in-view-effect .action-btn:hover {
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.50);
+    opacity: 1;
+    transition: 0.3s all;
+}
+
+.icon-md {
+    height: 25px;
+    width: 25px;
+}
+
+.month {
     position: relative;
     /*transition: all 4s;*/
 }
@@ -108,14 +245,13 @@ body {
 
 .month.in-view-effect .month__title {
     opacity: 1;
-    transform:translateY(0);
+    transform: translateY(0);
 }
 
-
-.month .month__img{
+.month .month__img {
     height: 400px;
     width: auto;
-    box-shadow: 0 15px 30px 6px rgba(0,0,0,0.50);
+    box-shadow: 0 15px 30px 6px rgba(0, 0, 0, 0.50);
     position: relative;
     opacity: 0;
     transform: translateY(100px);
@@ -125,10 +261,10 @@ body {
 
 .month.in-view-effect .month__img {
     opacity: 1;
-    transform:translateY(0);
+    transform: translateY(0);
 }
 
-.page1 h1{
+.page1 h1 {
     text-transform: capitalize;
     letter-spacing: 10px;
     color: black;
@@ -147,7 +283,7 @@ body {
 }
 
 .intro {
-    background-image:linear-gradient(-180deg, rgba(241, 167, 68, 0.85) 0%, rgba(67, 67, 67, 0.85) 100%), url("../img/intro_bg.jpg");
+    background-image: linear-gradient(-180deg, rgba(241, 167, 68, 0.85) 0%, rgba(67, 67, 67, 0.85) 100%), url("../img/intro_bg.jpg");
     background-color: bisque;
     color: brown;
     transition: background-color 1s;
@@ -156,7 +292,6 @@ body {
 .intro.effect {
     background-color: #ffa181;
 }
-
 
 .translate-100 {
     /*transition: transform 2s;*/
@@ -167,7 +302,7 @@ body {
     font-size: 15rem;
 }
 
-.text-calender{
+.text-calender {
     /*font-size: 10rem;*/
 }
 
@@ -267,5 +402,30 @@ body {
     color: rgba(192, 153, 154, 0.76);
 }
 
+.footer-main {
+    position: relative;
+    line-height: 1.6;
+}
+
+.column-title {
+    text-transform: uppercase;
+}
+
+.link-group li:after{
+    content: '/';
+    color: #F1A744;
+}
+
+.link-group li > a, .share-group li > a, .credits-group li > a{
+    transition: 0.5s all;
+}
+
+.link-group li > a:hover, .share-group li > a:hover, .credits-group li > a:hover{
+    color: #BDBDBD;
+}
+
+/*.footer-main .dwnld-btn .action-btn {
+    display: inline-flex;
+}*/
 
 /* Rectangle: */

@@ -32,7 +32,7 @@ $(document).ready(function () {
     .addIndicators()
     .addTo(controller);
   
-  $('.month').each(function () {
+  $('.month:not(:last-child)').each(function () {
     var monthScene = new ScrollMagic.Scene({
       triggerElement:this,
       duration:'67%',
@@ -44,14 +44,12 @@ $(document).ready(function () {
 
   $('.month').each(function () {
 
-    // console.log(this);
     var monthScene = new ScrollMagic.Scene({
       triggerElement:this,
       duration:'147%',
       triggerHook:0.65
     })
       .setClassToggle(this,'in-view-effect')
-      // .setPin(this,{pushFollowers:false})
       .addTo(controller);
   });
 
