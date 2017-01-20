@@ -53,4 +53,13 @@ $(document).ready(function () {
       .addTo(controller);
   });
 
+
+  $('.nav-icon-wrapper').click(function (e) {
+    var $this = $(this);
+
+    e.preventDefault();
+    $this.toggleClass('nav-clicked');
+    $this.parent().toggleClass('nav--show')
+  })
+
 });
