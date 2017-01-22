@@ -498,6 +498,13 @@ a{
     font-size: 2rem;
     line-height: 2;
     color: rgba(241, 167, 68, 0.76);
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+nav.nav--show .sidebar-item {
+    transition-delay: 0.5s;
+    opacity: 1;
 }
 
 .sidebar-item ul {
@@ -505,9 +512,6 @@ a{
     background-color: #434343;
     padding: 5rem;
     width: 280px;
-}
-
-.sidebar-item ul {
     text-transform: uppercase;
     height: 100vh;
     display: flex;
@@ -517,9 +521,19 @@ a{
 
 .sidebar-item ul li {
     opacity: 0;
+    position: relative;
     transition: opacity 0.01s, transform 0.5s;
     transition-delay: 0.5s;
     transform: translateX(-50px);
+}
+
+nav.nav--show .sidebar-item ul li {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.sidebar-item ul a {
+
 }
 
 .sidebar-item ul a:hover{
@@ -527,24 +541,17 @@ a{
     color: rgb(241, 167, 68);
 }
 
-.sidebar-item {
-    opacity: 0;
-    transition: all 0.5s;
+.sidebar-item ul a:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    color: red;
 }
 
 nav {
     position: fixed;
     z-index: 1;
-}
-
-nav.nav--show .sidebar-item {
-    transition-delay: 0.5s;
-    opacity: 1;
-}
-
-nav.nav--show .sidebar-item ul li {
-    opacity: 1;
-    transform: translateX(0);
 }
 
 .sidebar-reveal-effect {
