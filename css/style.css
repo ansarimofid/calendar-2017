@@ -653,6 +653,15 @@ nav.nav--show .sidebar-reveal-effect{
     transform: translateY(10px)rotate(-45deg);
 }
 
+.footer-main .dwnld-btn a{
+    color: rgb(158, 158, 158);
+    transition: 0.3s all;
+}
+
+.footer-main .dwnld-btn a:hover{
+    color: rgb(215, 215, 215);
+}
+
 @keyframes reveal-left {
     0%{
         transform: scaleX(0);
