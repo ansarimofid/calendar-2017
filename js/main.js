@@ -29,7 +29,6 @@ $(document).ready(function () {
     triggerHook:0.75
   })
     .setClassToggle('#id_page1','effect')
-    .addIndicators()
     .addTo(controller);
   
   $('.month:not(:last-child)').each(function () {
@@ -60,6 +59,16 @@ $(document).ready(function () {
     e.preventDefault();
     $this.toggleClass('nav-clicked');
     $this.parent().toggleClass('nav--show')
+  });
+
+  $('.share-btn').click(function (e) {
+    e.preventDefault();
+    $(this).closest('.main-wrapper').addClass('share-page--show');
+  });
+
+  $('.share-page .close-icon').click(function (e) {
+    e.preventDefault();
+    $(this).closest('.main-wrapper').removeClass('share-page--show');
   })
 
 });
