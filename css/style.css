@@ -16,6 +16,10 @@ a {
     text-decoration: none;
 }
 
+.main-wrapper {
+    overflow: hidden;
+}
+
 /*Helper classes*/
 
 .ff-archivo {
