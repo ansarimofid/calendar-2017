@@ -43,7 +43,7 @@ The motive of this project was to get better understanding of nature's colors.
 [Download](http://imgur.com/download/YarclSs)
 
 
-##June
+###June
 
 ![June](http://ansarimofid.in/calendar-2017/img/thumb/june.jpg)
 
