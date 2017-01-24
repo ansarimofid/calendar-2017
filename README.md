@@ -3,7 +3,7 @@ The repo contains the source code of the site showcasing the **2017 calendar**.
 The calendar is inspired by the color of nature. 
 The motive of this project was to get better understanding of nature's colors.
 
-## Screenshot ([Visit Website](http://ansarimofid.in/calendar-2017/))
+## Screenshot ([Visit Website](http://ansarimofid.in/calendar-2017/))([Video Preview](https://www.youtube.com/watch?v=rE1pQZWe5Dc))
 
 ![Preview](http://i.imgur.com/16tTMRe.gif)
 
