@@ -119,6 +119,14 @@ a{
     margin-top: 10rem;
 }
 
+.padding-l-2x {
+    padding-left: 2rem;
+}
+
+.padding-r-2x {
+    padding-right: 2rem;
+}
+
 .center-align {
     display: flex;
     justify-content: center;
@@ -689,6 +697,63 @@ nav.nav--show .sidebar-reveal-effect{
         transform-origin: 100% 0 0;
     }*/
 }
+
+@media screen and (max-width:850px) {
+    .month.in-view-effect .month__img {
+        width: 100%;
+        height: auto;
+    }
+
+    .month {
+        padding: 0 3rem;
+    }
+
+    .month .month__title {
+        font-size: 8rem;
+    }
+
+    .month > div {
+        flex-direction: column;
+    }
+
+    .month .action-btn-group {
+        margin-top: 2rem;
+        margin-left: 0;
+    }
+
+    .month .action-btn-group >a {
+        display: inline-flex;
+    }
+
+    .month .action-btn {
+        opacity: 0;
+        transform: translateY(125px);
+        transition: 0.3s all;
+    }
+
+    .month.in-view-effect .action-btn {
+        opacity: 0.7;
+        transform: translateY(0);
+        transition-delay: 0.75s;
+        transition:all 1.5s ease-in-out;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .month .month__title {
+        font-size: 6rem;
+    }
+
+    .sidebar-item ul {
+        width: calc(100vw - 200px);
+    }
+
+    .sidebar-reveal-effect {
+        width: calc(100vw - 100px);
+        left: 100px;
+    }
+}
+
 /*@keyframes sidebar-reveal {
     0%{
         transform: scaleX(1);
