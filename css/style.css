@@ -1,3 +1,6 @@
+/*Author: ansarimofid(ansarimofid@gmail.com)*/
+
+/*Genearal Style*/
 html {
     font-size: 10px;
 }
@@ -8,10 +11,12 @@ body {
     letter-spacing: 4px;
 }
 
-a{
+a {
     color: inherit;
     text-decoration: none;
 }
+
+/*Helper classes*/
 
 .ff-archivo {
     font-family: 'Archivo Black', sans-serif;
@@ -21,27 +26,28 @@ a{
     font-family: 'Tenor Sans', sans-serif;
 }
 
-.white-space{
+.white-space {
     display: block;
     width: 100%;
 }
 
-.space-sm{
+.space-sm {
     padding: 15px 0;
 }
 
-.space-mini{
+.space-mini {
     padding: 8px 0;
 }
 
-.space-xsm{
+.space-xsm {
     padding: 5px 0;
 }
 
-.space-md{
+.space-md {
     padding: 30px 0;
 }
-.space-lg{
+
+.space-lg {
     padding: 45px 0;
 }
 
@@ -97,7 +103,6 @@ a{
 .bg-color-primary {
     background-color: #F1A744 !important;
 }
-
 
 .margin-t-xsm {
     margin-top: 4px;
@@ -176,7 +181,7 @@ a{
 }
 
 .container {
-    max-width:960px;
+    max-width: 960px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -187,7 +192,7 @@ a{
     padding: 0;
 }
 
-.list-style-inline li{
+.list-style-inline li {
     display: inline-block;
 }
 
@@ -201,10 +206,11 @@ a{
     content: "/";
 }
 
-/*.gradient-jan{
-    !* Rectangle Copy: *!
-}*/
+.translate-100 {
+    transform: translateY(1000px);
+}
 
+/*Action Button*/
 .action-btn {
     background-color: white;
     border-radius: 50%;
@@ -212,9 +218,46 @@ a{
     width: 30px;
     height: 30px;
     margin: 1rem;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.50);
     cursor: pointer;
 }
+
+.page1 h1 {
+    text-transform: capitalize;
+    letter-spacing: 10px;
+    color: black;
+    transform: translateX(-500px);
+    transition: all 2s;
+    opacity: 0;
+}
+
+.page1.effect {
+    background-color: orange;
+}
+
+.page1.effect h1 {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/*Intro Page*/
+
+.intro {
+    background-image: linear-gradient(-180deg, rgba(241, 167, 68, 0.85) 0%, rgba(67, 67, 67, 0.85) 100%), url("../img/intro_bg.jpg");
+    background-color: bisque;
+    color: brown;
+    transition: background-color 1s;
+}
+
+.intro.effect {
+    background-color: #ffa181;
+}
+
+.text-2017 {
+    font-size: 15rem;
+}
+
+/*Month section style*/
 
 .month .action-btn {
     opacity: 0;
@@ -225,11 +268,11 @@ a{
 .month.in-view-effect .action-btn {
     opacity: 0.7;
     transform: translateY(0);
-    transition:all 2s ease-in-out;
+    transition: all 2s ease-in-out;
 }
 
 .month.in-view-effect .action-btn:hover {
-    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.50);
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.50);
     opacity: 1;
     transition: 0.3s all;
 }
@@ -270,48 +313,6 @@ a{
 .month.in-view-effect .month__img {
     opacity: 1;
     transform: translateY(0);
-}
-
-.page1 h1 {
-    text-transform: capitalize;
-    letter-spacing: 10px;
-    color: black;
-    transform: translateX(-500px);
-    transition: all 2s;
-    opacity: 0;
-}
-
-.page1.effect {
-    background-color: orange;
-}
-
-.page1.effect h1 {
-    transform: translateX(0);
-    opacity: 1;
-}
-
-.intro {
-    background-image: linear-gradient(-180deg, rgba(241, 167, 68, 0.85) 0%, rgba(67, 67, 67, 0.85) 100%), url("../img/intro_bg.jpg");
-    background-color: bisque;
-    color: brown;
-    transition: background-color 1s;
-}
-
-.intro.effect {
-    background-color: #ffa181;
-}
-
-.translate-100 {
-    /*transition: transform 2s;*/
-    transform: translateY(1000px);
-}
-
-.text-2017 {
-    font-size: 15rem;
-}
-
-.text-calender {
-    /*font-size: 10rem;*/
 }
 
 .month.jan {
@@ -410,6 +411,8 @@ a{
     color: rgba(192, 153, 154, 0.76);
 }
 
+/*Footer Style*/
+
 .footer-main {
     position: relative;
     line-height: 1.6;
@@ -419,23 +422,34 @@ a{
     text-transform: uppercase;
 }
 
-.link-group li:after{
+.link-group li:after {
     content: '/';
     color: #F1A744;
 }
 
-.link-group li > a, .share-group li > a, .credits-group li > a{
+.link-group li > a, .share-group li > a, .credits-group li > a {
     transition: 0.5s all;
 }
 
-.link-group li > a:hover, .share-group li > a:hover, .credits-group li > a:hover{
+.link-group li > a:hover, .share-group li > a:hover, .credits-group li > a:hover {
     color: #BDBDBD;
 }
+
+.footer-main .dwnld-btn a {
+    color: rgb(158, 158, 158);
+    transition: 0.3s all;
+}
+
+.footer-main .dwnld-btn a:hover {
+    color: rgb(215, 215, 215);
+}
+
+/*Navigation, Sidebar Style*/
 
 .nav-icon-wrapper {
     position: fixed;
     right: 30px;
-    top:40px;
+    top: 40px;
     z-index: 3;
     cursor: pointer;
     width: 100px;
@@ -492,11 +506,11 @@ a{
 }
 
 .nav-icon-wrapper.nav-clicked .nav-icon:before {
-    transform: translateY(10px)rotate(45deg);
+    transform: translateY(10px) rotate(45deg);
 }
 
 .nav-icon-wrapper.nav-clicked .nav-icon:after {
-    transform: translateY(-10px)rotate(-45deg);
+    transform: translateY(-10px) rotate(-45deg);
 }
 
 .sidebar-item {
@@ -555,19 +569,19 @@ nav.nav--show .sidebar-item ul li {
     position: absolute;
     width: 100%;
     height: 2px;
-    top:18px;
-    background-color:rgb(241, 167, 68);
+    top: 18px;
+    background-color: rgb(241, 167, 68);
     transform-origin: left;
     transform: scaleX(0);
     transition: 0.2s all;
 }
 
-.sidebar-item ul a:hover{
+.sidebar-item ul a:hover {
     transition: 0.3s all;
     color: rgb(241, 167, 68);
 }
 
-.sidebar-item ul a:hover:after{
+.sidebar-item ul a:hover:after {
     transition: 0.3s all;
     color: rgb(241, 167, 68);
     transform: scaleX(1);
@@ -590,7 +604,7 @@ nav {
     background-image: linear-gradient(-180deg, rgba(241, 167, 68, 1) 0%, rgba(67, 67, 67, 1) 100%);
 }
 
-nav.nav--show .sidebar-reveal-effect{
+nav.nav--show .sidebar-reveal-effect {
     animation: reveal-left 1s ease-in-out 1;
 }
 
@@ -599,6 +613,8 @@ nav.nav--show .sidebar-reveal-effect{
     bottom: 20px;
     width: 100%;
 }
+
+/*Share Page*/
 
 .share-page {
     display: flex;
@@ -611,7 +627,7 @@ nav.nav--show .sidebar-reveal-effect{
     transition: all 0.2s;
 }
 
-.share-page--show .share-page{
+.share-page--show .share-page {
     z-index: 4;
     display: flex;
     opacity: 1;
@@ -620,10 +636,10 @@ nav.nav--show .sidebar-reveal-effect{
 
 .facebook-link {
     position: relative;
-    top:-4px;
+    top: -4px;
 }
 
-
+/*Close btn style*/
 .close-icon {
     display: block;
     width: 50px;
@@ -642,7 +658,6 @@ nav.nav--show .sidebar-reveal-effect{
     opacity: 1;
 }
 
-
 .close-icon:before, .close-icon:after {
     content: "";
     display: block;
@@ -654,41 +669,32 @@ nav.nav--show .sidebar-reveal-effect{
 }
 
 .close-icon:before {
-    transform: translateY(10px)rotate(45deg);
+    transform: translateY(10px) rotate(45deg);
 }
 
 .close-icon:after {
-    transform: translateY(10px)rotate(-45deg);
-}
-
-.footer-main .dwnld-btn a{
-    color: rgb(158, 158, 158);
-    transition: 0.3s all;
-}
-
-.footer-main .dwnld-btn a:hover{
-    color: rgb(215, 215, 215);
+    transform: translateY(10px) rotate(-45deg);
 }
 
 @keyframes reveal-left {
-    0%{
+    0% {
         transform: scaleX(0);
         transform-origin: left;
         /*transform-origin: 0 100% 0;*/
         /*background-color: white;*/
     }
-    49%{
+    49% {
         /*transform-origin: 100% 50% 0;*/
         transform-origin: left;
         transform: scaleX(1);
         /*transform-origin: 0 100% 0;*/
         /*background-color: green;*/
     }
-    50%{
+    50% {
         transform: scaleX(1);
         transform-origin: 100% 0 0;
     }
-    100%{
+    100% {
         transform: scaleX(0);
         transform-origin: 100% 0 0;
     }
@@ -698,7 +704,7 @@ nav.nav--show .sidebar-reveal-effect{
     }*/
 }
 
-@media screen and (max-width:850px) {
+@media screen and (max-width: 850px) {
     .month.in-view-effect .month__img {
         width: 100%;
         height: auto;
@@ -721,7 +727,7 @@ nav.nav--show .sidebar-reveal-effect{
         margin-left: 0;
     }
 
-    .month .action-btn-group >a {
+    .month .action-btn-group > a {
         display: inline-flex;
     }
 
@@ -735,11 +741,12 @@ nav.nav--show .sidebar-reveal-effect{
         opacity: 0.7;
         transform: translateY(0);
         transition-delay: 0.75s;
-        transition:all 1.5s ease-in-out;
+        transition: all 1.5s ease-in-out;
     }
 }
 
-@media screen and (max-width:640px) {
+/*Sidebar Animation*/
+@media screen and (max-width: 640px) {
     .month .month__title {
         font-size: 6rem;
     }
@@ -753,27 +760,3 @@ nav.nav--show .sidebar-reveal-effect{
         left: 100px;
     }
 }
-
-/*@keyframes sidebar-reveal {
-    0%{
-        transform: scaleX(1);
-        transform-origin: 100% 0 0;
-        !*background-color: white;*!
-    }
-    100%{
-        !*transform-origin: 100% 50% 0;*!
-        transform: scaleX(0);
-        transform-origin: 100% 0 0;
-        !*background-color: green;*!
-    }
-    !*100%{
-        transform: scaleX(0);
-        transform-origin: 100% 0 0;
-    }*!
-}*/
-
-/*.footer-main .dwnld-btn .action-btn {
-    display: inline-flex;
-}*/
-
-/* Rectangle: */
