@@ -7,14 +7,21 @@ $(document).ready(function () {
   // Smooth Scroll
   $('a[href*="#"]:not([href="#"])').click(function () {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-      var target = $(this.hash);
+      var hash = this.hash;
+      var target = $(hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
+      if (target.length && (target.offset().top != Math.round(target.offset().top))) {
+        var placesToJump = $(window).scrollTop() - target.offset().top;
+        //console.log(((Math.round(placesToJump) - 204)+618));
+        //so the 204 isn't consistant, try to find how 204 relates to the height of window or target
+        target = $(window).scrollTop() - (Math.round(placesToJump) - 204)-618;
+      }else{
+        target = target.offset().top;
       }
+      $('html, body').animate({
+          scrollTop: target
+        }, 1000);
+      return false;
     }
   });
 
