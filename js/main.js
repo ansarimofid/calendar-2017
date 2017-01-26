@@ -10,11 +10,11 @@ $(document).ready(function () {
       var hash = this.hash;
       var target = $(hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      if (target.length && (target.offset().top != Math.round(target.offset().top))) {
+      if (target.length && target.offset().top < $(window).scrollTop()) {
         var placesToJump = $(window).scrollTop() - target.offset().top;
-        //console.log(((Math.round(placesToJump) - 204)+618));
-        //so the 204 isn't consistant, try to find how 204 relates to the height of window or target
-        target = $(window).scrollTop() - (Math.round(placesToJump) - 204)-618;
+        var magicNum = (placesToJump/target.height()) - Math.round(placesToJump/target.height());//the offness of the scrollTop() as a decimal
+        placesToJump = ((Math.round(placesToJump - (target.height()*magicNum)))/target.height()) + 1;
+        target = $(window).scrollTop() - (placesToJump * target.height());
       }else{
         target = target.offset().top;
       }
