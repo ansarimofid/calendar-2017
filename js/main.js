@@ -7,14 +7,21 @@ $(document).ready(function () {
   // Smooth Scroll
   $('a[href*="#"]:not([href="#"])').click(function () {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-      var target = $(this.hash);
+      var hash = this.hash;
+      var target = $(hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
+      if (target.length && target.offset().top < $(window).scrollTop()) {
+        var placesToJump = $(window).scrollTop() - target.offset().top;
+        var magicNum = (placesToJump/target.height()) - Math.round(placesToJump/target.height());//the offness of the scrollTop() as a decimal
+        placesToJump = ((Math.round(placesToJump - (target.height()*magicNum)))/target.height()) + 1;
+        target = $(window).scrollTop() - (placesToJump * target.height());
+      }else{
+        target = target.offset().top;
       }
+      $('html, body').animate({
+          scrollTop: target
+        }, 1000);
+      return false;
     }
   });
 
