@@ -11,17 +11,25 @@ $(document).ready(function () {
       var target = $(hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
       if (target.length && target.offset().top < $(window).scrollTop()) {
-        var placesToJump = $(window).scrollTop() - target.offset().top;
-        var magicNum = (placesToJump/target.height()) - Math.round(placesToJump/target.height());//the offness of the scrollTop() as a decimal
-        placesToJump = ((Math.round(placesToJump - (target.height()*magicNum)))/target.height()) + 1;
-        target = $(window).scrollTop() - (placesToJump * target.height());
+        var originalPosition = $(window).scrollTop();
+        var newTarget;
+        $('#id_intro').css('visibility', 'hidden');
+        window.scrollTo(0,0);
+        setTimeout(function(){
+          newTarget = $(hash).offset().top;
+          window.scrollTo(0, originalPosition);
+          $('#id_intro').css('visibility', 'visible');
+          $('html, body').animate({
+            scrollTop: newTarget
+          }, 1000);
+        },15);
+        return false;
       }else{
-        target = target.offset().top;
-      }
-      $('html, body').animate({
-          scrollTop: target
+        $('html, body').animate({
+          scrollTop: target.offset().top
         }, 1000);
-      return false;
+        return false;
+      }      
     }
   });
 
